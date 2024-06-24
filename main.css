@@ -1,84 +1,55 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-header,
-section h2 {
-    font-family: "Bungee", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-header{
-    padding: 16px 0;
-    background-color: #182c61;
-    color: #ecf0f1;
-}
-
-header h1,
-section h2{
-    font-weight: normal;
-}
-
-header nav li{
-    display: inline;
-    margin-left: 16px;
-    font-size: 18px;
-}
-
-header nav li a{
-    color: #ecf0f1;
-    text-decoration: none;
+    border: 10;
+    font-weight: bold;
 }
 
 .container{
-    max-width: 1280px;
-    width: 100%;
+    width: 600px;
     margin: 0 auto;
 }
 
-header .container,
-section .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-.brands-list img{
-    height: 24px;
-}
-
-.brands-list li{
-    display: inline;
-    margin-right: 8px;
-}
-
-section .container{
-    align-items: flex-start;
-}
-
-section{
-    padding: 24px 0;
-    color: #182c61;
-}
-
-section h2{
+h1{
+    margin-top: 180px;
     margin-bottom: 16px;
 }
 
-section p{
-    margin-bottom: 8px;
+h2{
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-.store-front{
-    margin-right: 32px;
+input, button{
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    padding: 10px;
+}
+
+button{
+    background-color: rgb(40, 160, 40);
+    border: none;
+    color: azure;
+    cursor: pointer;
+    font-size: large;
+}
+
+button:hover{
+    background-color: rgb(40, 180, 40);
+}
+
+.success-message{
+    background-color:rgb(40, 160, 40);
+    color: azure;
+    padding: 8px;
+    display: none;
+}
+
+.error-message{
+    background-color:rgb(160, 40, 40);
+    color: azure;
+    padding: 8px;
+    display: none;
 }

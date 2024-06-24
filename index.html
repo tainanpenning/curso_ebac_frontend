@@ -3,49 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Shop - A sua loja de games</title>
+    <title>Atividade HTML com JS</title>
     <link rel="stylesheet" href="./main.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Games Shop</h1>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Sobre a loja</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </ul>
-                </nav>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <img class="store-front" src="./images/loja.jpg" title="Fachada da loja Games Shop">
-            <h2>Sobre a loja</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aut porro odit optio, expedita inventore aliquam fuga quas saepe magnam! Facilis suscipit tempora iusto dolore blanditiis, itaque deserunt perspiciatis possimus!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, cum. Quae error blanditiis nemo explicabo tenetur. Itaque illum, nemo temporibus, labore dolores sequi cum provident illo repudiandae veniam maiores nobis.
-            </p>
-            <ul class="brands-list">
-                <li><img src="./images/nintendo.png" title="Nintendo"></li>
-                <li><img src="./images/playstation.png" title="Playstation"></li>
-                <li><img src="./images/xbox.png" title="Xbox"></li>
-            </ul>
-        </div>
-    </section>
+    <div class="container">
+        <h1>Preencha o formulário abaixo:</h1>
+        <h2>O <u>primeiro número</u> deve ser <u>menor</u> que o segundo.</h2>
+        <form id="formulario">
+            <input type="number" id="primeiro-numero" required placeholder="Primeiro número"/>
+            <input type="number" id="segundo-numero" required placeholder="Segundo número"/>
+            <button type="submit" id="botao">Verificar</button>
+            <p class="success-message"></p>
+            <p class="error-message"></p>
+        </form>
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
