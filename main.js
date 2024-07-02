@@ -1,30 +1,29 @@
-const form = document.getElementById('formulario');
-const primeiroNumero = document.getElementById('primeiro-numero');
-const segundoNumero = document.getElementById('segundo-numero');
-const mensagemSucesso = document.querySelector('.success-message');
-const mensagemErro = document.querySelector('.error-message');
+$(document).ready(function() {
+    $('header button').click(function() {
+        $('.container').fadeIn(500)
+    })
 
+    $('#botao-cancelar').click(function() {
+        $('.container').fadeOut(300)
+    })
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    $('form').on('submit', function(e) {
+        e.preventDefault()
 
-    const valorPrimeiroNumero = Number(primeiroNumero.value);
-    const valorSegundoNumero = Number(segundoNumero.value);
+        const nomeTarefa = $('#input-nome').val()
+        const data = $('#input-data').val()
+        const hora = $('#input-hora').val()
 
-    const mensagemErroTexto = `Incorreto! O ${valorPrimeiroNumero} é maior que o ${valorSegundoNumero}.`;
-    const mensagemSucessoTexto = `Correto! O ${valorPrimeiroNumero} é menor que o ${valorSegundoNumero}.`;
+        const novaTarefa = $('<li style="display: none"></li>')
+        $(`<h3 class="nome-tarefa" style="font-weight: 400;">${nomeTarefa}</h3>`).appendTo(novaTarefa)
+        $(`<h3 class="data-tarefa" style="font-weight: 400;">${data}</h3>`).appendTo(novaTarefa)
+        $(`<h3 class="hora-tarefa" style="font-weight: 400;">${hora}</h3>`).appendTo(novaTarefa)
+        $(novaTarefa).appendTo('ol')
+        $(novaTarefa).fadeIn(1000)
 
-    if (valorSegundoNumero <= valorPrimeiroNumero) {
-
-        mensagemErro.innerHTML = mensagemErroTexto;
-        mensagemErro.style.display = 'block';
-        mensagemSucesso.style.display = 'none';
-
-    }else {
-
-        mensagemSucesso.innerHTML = mensagemSucessoTexto;
-        mensagemSucesso.style.display = 'block';
-        mensagemErro.style.display = 'none';
-
-    }
+        $('#input-nome').val('')
+        $('#input-data').val('')
+        $('#input-hora').val('')
+    })
 })
+

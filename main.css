@@ -1,55 +1,105 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
-    border: 10;
-    font-weight: bold;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: yellow;
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+header button{
+    font-size: 30px;
+    background-color: rgb(55, 236, 176);
+    padding: 6px;
+    margin-top: 8px;
+    max-width: 100%;
+    width: 70px;
+    cursor: pointer;
+}
+
+body{
+    background-color: aliceblue;
+    height: 100%;
+    margin: 0;
 }
 
 .container{
-    width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 222px;
+    padding: 10px;
+    background-color: yellow;
+    border: 1px solid #000;
+    border-top: none;
+    float: left;
+    display: none;
 }
 
-h1{
-    margin-top: 180px;
-    margin-bottom: 16px;
+form{
+    display: flex;
+    flex-direction: column;
 }
 
-h2{
-    margin-bottom: 10px;
+label{
+    font-size: medium;
     font-weight: 500;
 }
 
-input, button{
-    display: block;
+form input{
+    font-size: medium;
+    padding: 4px;
     margin-bottom: 8px;
-    width: 100%;
+}
+
+form button{
+    font-size: large;
+    font-weight: 500;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: rgb(55, 236, 176);
+    cursor: pointer;
+}
+
+.cor-botao-cancelar{
+    background-color: rgb(255, 57, 57);
+}
+
+.cor-botao-cancelar:hover{
+    background-color: rgb(230, 53, 53);
+}
+
+form button:hover,
+header button:hover{
+    background-color: rgb(51, 221, 164);
+}
+
+ol li{
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    font-weight: 500;
+    border-bottom: 1px solid #000;
     padding: 10px;
 }
 
-button{
-    background-color: rgb(40, 160, 40);
-    border: none;
-    color: azure;
-    cursor: pointer;
-    font-size: large;
+.nome-tarefa{
+    width: 100%;
 }
 
-button:hover{
-    background-color: rgb(40, 180, 40);
+.data-tarefa{
+    width: 40%;
 }
 
-.success-message{
-    background-color:rgb(40, 160, 40);
-    color: azure;
-    padding: 8px;
-    display: none;
-}
-
-.error-message{
-    background-color:rgb(160, 40, 40);
-    color: azure;
-    padding: 8px;
-    display: none;
+.hora-tarefa{
+    width: 30%;
 }
