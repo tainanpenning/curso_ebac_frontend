@@ -92,6 +92,14 @@ ol li{
     padding: 10px;
 }
 
+li:hover{
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
 .nome-tarefa{
     width: 100%;
 }

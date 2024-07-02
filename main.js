@@ -1,10 +1,14 @@
 $(document).ready(function() {
     $('header button').click(function() {
-        $('.container').fadeIn(500)
+        $('.container').slideDown(500)
     })
 
     $('#botao-cancelar').click(function() {
-        $('.container').fadeOut(300)
+        $('.container').slideUp(300)
+    })
+    
+    $('li').click(function(){
+        $('li').toggleClass('line-through');
     })
 
     $('form').on('submit', function(e) {
