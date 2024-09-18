@@ -1,8 +1,11 @@
-@use "../config/reset.scss";
-@use "../config/var.scss";
+@import "./mapas.less";
+@import "./reset.less";
+
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+@breakpointMobile: ~"(max-width: 767px)";
 
 header {
-    background-color: var.$corPrincipal;
+    background-color: #colors[backgroundColor];
     position: sticky;
     top: 0;
     left: 0;
@@ -58,7 +61,7 @@ section {
 
     & .product-button {
         display: block;
-        background-color: var.$corButton;
+        background-color: #colors[buttonColor];
         color: #fff;
         text-align: center;
         padding: 8px 0;
@@ -67,12 +70,12 @@ section {
         text-decoration: none;
 
         &:hover{
-            background-color: lighten(var.$corButton, 10%);
+            background-color: lighten(#colors()[buttonColor], 10%);
         }
     }
 }
 
-@media screen and (max-width: var.$tablet) {
+@media @breakpointTablet{
     .container {
         max-width: 80%;
     }
@@ -83,7 +86,7 @@ section {
     }
 }
 
-@media screen and (max-width: var.$mobile) {
+@media @breakpointMobile{
     .products {
         display: block;
     }
