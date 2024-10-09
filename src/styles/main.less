@@ -1,11 +1,18 @@
-@import "./mapas.less";
-@import "./reset.less";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, system-ui;
+}
+
+@backgroundColor: #273c75;
+@buttonColor: #44bd32;
 
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 @breakpointMobile: ~"(max-width: 767px)";
 
 header {
-    background-color: #colors[backgroundColor];
+    background-color: @backgroundColor;
     position: sticky;
     top: 0;
     left: 0;
@@ -61,7 +68,7 @@ section {
 
     & .product-button {
         display: block;
-        background-color: #colors[buttonColor];
+        background-color: @buttonColor;
         color: #fff;
         text-align: center;
         padding: 8px 0;
@@ -70,7 +77,7 @@ section {
         text-decoration: none;
 
         &:hover{
-            background-color: lighten(#colors()[buttonColor], 10%);
+            background-color: lighten(@buttonColor, 10%);
         }
     }
 }
