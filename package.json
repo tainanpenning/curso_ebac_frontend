@@ -2,33 +2,15 @@
   "name": "curso_ebac_frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {
-    "copy-anything": "^2.0.6",
-    "errno": "^0.1.8",
-    "graceful-fs": "^4.2.11",
-    "iconv-lite": "^0.6.3",
-    "image-size": "^0.5.5",
-    "is-what": "^3.14.1",
-    "mime": "^1.6.0",
-    "needle": "^3.3.1",
-    "parse-node-version": "^1.0.1",
-    "prr": "^1.0.1",
-    "safer-buffer": "^2.1.2",
-    "sax": "^1.2.4",
-    "tslib": "^2.7.0"
-  },
   "scripts": {
-    "grunt": "grunt",
-    "build": "grunt build",
+    "sass": "sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-contrib-less": "^3.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0"
+    "sass": "^1.80.2"
   }
 }
